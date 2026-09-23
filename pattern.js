@@ -1,12 +1,13 @@
-  function star(n){
-  for (let row= 1;row<=n;row++){
-   let line='';
-    for (let col=1;col<=n+1-row;col++){
-      line+="*";
-     
+function star(n) {
+  let result = "";
+  for (let row = 1; row <= n; row++) {
+    let line = "";
+    for (let col = 1; col <= row; col++) {
+      line += "*";
     }
-       console.log(line);
+    result += line + "\n";
   }
-  }
-  
-  console.log(star(4))
+  return result;
+}
+
+console.log(star(4));
